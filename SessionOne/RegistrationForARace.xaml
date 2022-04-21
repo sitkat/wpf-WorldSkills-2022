@@ -1,0 +1,81 @@
+﻿<Window x:Class="SessionOne.RegistrationForARace"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SessionOne"
+        mc:Ignorable="d"
+        Title="Kart Skills 2022" TextBlock.TextAlignment="Center" Height="450" Width="800" WindowStartupLocation="CenterScreen" Icon="/Images/checkered-flag-sports-tool.ico">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="42*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <DockPanel x:Name="UpperPanel" Background="Gray" Grid.ColumnSpan="11" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Москва, Россия 20 июня 2022" FontFamily="Arial" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="12"  Grid.Row="1"/>
+                <TextBlock Text="Kart Skills 2022" FontFamily="Arial" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="32"  Grid.Row="0"/>
+                <Button x:Name="btnBackToRacerMenu"  Margin="34,25,664,25" Content="Назад" FontWeight="Medium" FontSize="15" BorderBrush="Black" Grid.RowSpan="2" Click="btnBackToRacerMenu_Click"/>
+                <Button x:Name="btnBackToMainMenu"  Margin="644,25,34,25" Content="Выйти" FontWeight="Medium" FontSize="15" BorderBrush="Black" Grid.RowSpan="2" Click="btnBackToMainMenu_Click"/>
+            </Grid>
+        </DockPanel>
+
+        <TextBlock Text="Регистрация на гонку" Grid.Column="0" Grid.ColumnSpan="11" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top"  FontSize="20" Margin="5" FontFamily="Arial" FontWeight="Light"/>
+        <TextBlock Text="Вид гонки" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Arial" Height="18"  FontSize="17"/>
+        <TextBlock Text="Варианты комплектов" Grid.Column="6" Grid.ColumnSpan="4" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Arial" Height="18" FontSize="17"/>
+
+        <CheckBox x:Name="typeOne" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" Content="Заезд 2,5 км($25)" FontFamily="Arial" Margin="5" IsChecked="False" Click="typeOne_Click"/>
+        <CheckBox x:Name="typeTwo" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="3" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" Content="Заезд 4 км($40)" FontFamily="Arial" Margin="5" IsChecked="False" Click="typeTwo_Click"/>
+        <CheckBox x:Name="typeThree" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="3" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" Content="Заезд 6,5 км($65)" FontFamily="Arial" Margin="5" IsChecked="False" Click="typeThree_Click"/>
+
+        <RadioButton Click="RadioTypeOne_Click" IsChecked="True" x:Name="RadioTypeOne" Grid.Column="6" Grid.Row="3" Grid.ColumnSpan="5" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" Content="Вариант А ($0) Номер пилота + Браслет" FontFamily="Arial" Margin="5"/>
+        <RadioButton Click="RadioTypeTwo_Click" x:Name="RadioTypeTwo" Grid.Column="6" Grid.Row="4" Grid.ColumnSpan="5" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" Content="Вариант В ($30) Номер пилота + Шлем + Браслет" FontFamily="Arial" Margin="5"/>
+        <RadioButton Click="RadioTypeThree_Click" x:Name="RadioTypeThree" Grid.Column="6" Grid.Row="5" Grid.ColumnSpan="5" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" Content="Вариант С ($50) Номер пилота + Экипировка + Браслет" FontFamily="Arial" Margin="5"/> 
+
+        <TextBlock Text="Детали спонсорства" Grid.Column="1" Grid.Row="6" FontFamily="Arial" Grid.ColumnSpan="4" VerticalAlignment="Center" HorizontalAlignment="Center" Height="18" Margin="0,0,80,0" FontSize="17" />
+        <TextBlock Text="Взнос:" Grid.Column="1" Grid.Row="7" FontFamily="Arial" FontSize="12" VerticalAlignment="Center" Height="13" />
+        <TextBlock Text="Сумма:" Grid.Column="1" Grid.Row="8" FontFamily="Arial" FontSize="12"  VerticalAlignment="Center" Height="13" />
+        
+        <TextBlock Text="Регистрационный взнос" Grid.Column="6" Grid.Row="6" FontFamily="Arial" Grid.ColumnSpan="4" VerticalAlignment="Center" HorizontalAlignment="Center" Height="18"  FontSize="17" />
+        <TextBlock x:Name="tbNeedToPay" Text="0" Grid.Column="6" Grid.Row="7"  Grid.ColumnSpan="4" Grid.RowSpan="2" FontFamily="Arial" VerticalAlignment="Center" HorizontalAlignment="Center"  FontSize="30" FontWeight="SemiBold"/>
+
+        <ComboBox Name="cbCharity" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="7" Margin="5" BorderBrush="Black" VerticalAlignment="Center"/>
+        <TextBox Name="tbPayment" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="8" Margin="5" Text="0" BorderBrush="Black" VerticalAlignment="Center" PreviewTextInput="tbPayment_PreviewTextInput"/>
+      
+        
+        
+        <Button Name="Registration" Grid.Column="1" Grid.Row="9" Margin="5" Content="Регистрация" BorderBrush="Black" Click="Registration_Click"/>
+        <Button Name="Cancel" Grid.Column="3" Grid.Row="9" Margin="5" Content="Отмена" BorderBrush="Black" Click="btnBackToRacerMenu_Click"/>
+
+        <DockPanel x:Name="DownPanel" Background="Gray" Grid.Row="10" Grid.ColumnSpan="11">
+            <TextBlock Name="TimeToEvent" Text="Время" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="12" FontWeight="DemiBold" Grid.Row="1" FontFamily="Arial"/>
+        </DockPanel>
+    </Grid>
+</Window>

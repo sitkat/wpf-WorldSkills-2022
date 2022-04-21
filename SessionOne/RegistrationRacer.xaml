@@ -1,0 +1,80 @@
+﻿<Window x:Class="SessionOne.RegistrationRacer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SessionOne"
+        mc:Ignorable="d"
+        Title="Kart Skills 2022" TextBlock.TextAlignment="Center" Height="450" Width="800" WindowStartupLocation="CenterScreen" Icon="/Images/checkered-flag-sports-tool.ico">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="76*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="80*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <DockPanel x:Name="UpperPanel" Background="Gray" Grid.ColumnSpan="11" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Москва, Россия 20 июня 2022" FontFamily="Arial" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="12"  Grid.Row="1"/>
+                <TextBlock Text="Kart Skills 2022" FontFamily="Arial" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="32"  Grid.Row="0"/>
+                <Button x:Name="btnBackToMainMenu"  Margin="34,25,664,25" Content="Назад" FontWeight="Medium" FontSize="15" BorderBrush="Black" Grid.RowSpan="2" Click="btnBackToMainMenu_Click"/>
+            </Grid>
+        </DockPanel>
+        <TextBlock Text="Регистрация гонщиков" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="11" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontFamily="Arial" FontWeight="Light"/>
+        <TextBlock Text="Email:" Grid.Column="1" Grid.Row="2" FontFamily="Arial" Grid.ColumnSpan="3" VerticalAlignment="Center" Height="13" Margin="0,0,75,0"/>
+        <TextBlock Text="Пароль:" Grid.Column="1" Grid.Row="3" FontFamily="Arial" Grid.ColumnSpan="3" VerticalAlignment="Center" Height="13" Margin="0,0,75,0"/>
+        <TextBlock Text="Повторите пароль:" Grid.Column="1" Grid.Row="4" FontFamily="Arial" Grid.ColumnSpan="3" VerticalAlignment="Center" Height="13" Margin="0,0,75,0"/>
+        <TextBlock Text="Имя:" Grid.Column="1" Grid.Row="5" FontFamily="Arial" Grid.ColumnSpan="3" VerticalAlignment="Center" Height="13" Margin="0,0,75,0"/>
+        <TextBlock Text="Фамилия:" Grid.Column="1" Grid.Row="6" FontFamily="Arial" Grid.ColumnSpan="3" VerticalAlignment="Center" Height="13" Margin="0,0,75,0"/>
+        <TextBlock Text="Пол:" Grid.Column="1" Grid.Row="7" FontFamily="Arial" Grid.ColumnSpan="3" VerticalAlignment="Center" Height="13" Margin="0,0,75,0"/>
+        <TextBox Name="tbEmail" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="2" Margin="5" BorderBrush="Black" VerticalAlignment="Center"/>
+        <PasswordBox Name="tbPassword" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="3" Margin="5" BorderBrush="Black" VerticalAlignment="Center"/>
+        <PasswordBox Name="tbRepeatPassword" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="4" Margin="5" BorderBrush="Black" VerticalAlignment="Center"/>
+        <TextBox Name="tbName" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="5" Margin="5" BorderBrush="Black" VerticalAlignment="Center" PreviewTextInput="tbName_PreviewTextInput"/>
+        <TextBox Name="tbLastName" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="6" Margin="5" BorderBrush="Black" VerticalAlignment="Center" PreviewTextInput="tbName_PreviewTextInput"/>
+        <ComboBox Name="cbGender" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="7" Margin="5" BorderBrush="Black" VerticalAlignment="Center"/>
+
+        <TextBlock Grid.Column="6" Grid.Row="4" Text="Фото файл:" VerticalAlignment="Bottom" FontFamily="Arial" Margin="5"/>
+        <TextBox FontFamily="Arial" Text="profile.png" Name="tbPhoto" Grid.Column="6" Grid.ColumnSpan="3" Grid.Row="5" Margin="5" BorderBrush="Black" VerticalAlignment="Center" IsReadOnly="True"/>
+        <Button x:Name="btnSelectPhoto" FontFamily="Arial" Content="Просмотр" Grid.Column="9" Grid.Row="5" Grid.ColumnSpan="2" VerticalAlignment="Center" BorderBrush="Black" HorizontalAlignment="Left" Margin="5" Click="btnSelectPhoto_Click"/>
+        <Image x:Name="imgPhoto" Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="3" Source="/Images/profile.png"/>
+        <TextBlock Text="Дата рождения:" Grid.Column="6" Grid.Row="6" FontFamily="Arial" Grid.ColumnSpan="3" VerticalAlignment="Center" Height="13" Margin="0,0,75,0"/>
+        <TextBlock Text="Страна:" Grid.Column="6" Grid.Row="7" FontFamily="Arial" Grid.ColumnSpan="3" VerticalAlignment="Center" Height="13" Margin="0,0,75,0"/>
+
+        <TextBox Name="tbDateOfBirth" Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="6" Margin="5" BorderBrush="Black" VerticalAlignment="Center" MaxLength="10" PreviewTextInput="tbDateOfBirth_PreviewTextInput" TextChanged="tbDateOfBirth_TextChanged"/>
+        <ComboBox Name="cbCountry" Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="7" Margin="5" BorderBrush="Black" VerticalAlignment="Center"/>
+        
+        
+        <Button Name="btnRegistration" Grid.Column="4" Grid.Row="8" Margin="5" Content="Регистрация" BorderBrush="Black" Click="btnRegistration_Click"/>
+        <Button Name="btnCancel" Grid.Column="6" Grid.Row="8" Margin="5" Content="Отмена" BorderBrush="Black" Click="btnBackToMainMenu_Click"/>
+
+        <DockPanel x:Name="DownPanel" Background="Gray" Grid.Row="10" Grid.ColumnSpan="11">
+            <TextBlock Name="TimeToEvent" Text="Время" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="12" FontWeight="DemiBold" Grid.Row="1" FontFamily="Arial"/>
+        </DockPanel>
+    </Grid>
+</Window>

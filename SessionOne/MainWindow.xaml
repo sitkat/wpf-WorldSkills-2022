@@ -1,0 +1,63 @@
+﻿<Window x:Class="SessionOne.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SessionOne"
+        mc:Ignorable="d"
+        Title="Kart Skills 2022" TextBlock.TextAlignment="Center" Height="450" Width="800" WindowStartupLocation="CenterScreen" Icon="/Images/checkered-flag-sports-tool.ico">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <DockPanel x:Name="UpperPanel" Background="Gray" Grid.ColumnSpan="9" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Москва, Россия 20 июня 2022" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="12" FontFamily="Arial" FontWeight="SemiBold" Grid.Row="1"/>
+                <TextBlock Text="Kart Skills 2022" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="32" FontFamily="Arial" FontWeight="SemiBold" Grid.Row="0"/>
+            </Grid>
+        </DockPanel>
+
+        <DockPanel x:Name="DownPanel" Background="Gray" Grid.Row="6" Grid.ColumnSpan="9" >
+            <TextBlock Name="TimeToEvent" Text="Время" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="12" FontWeight="DemiBold" Grid.Row="1"/>
+        </DockPanel>
+
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" Grid.Row="2">
+            <Image Name="HelmetImage" Source="Images/Shlem.png" Grid.Column="1" Grid.Row="2" MouseLeftButtonUp="HelmetImage_MouseLeftButtonUp"/>
+        </Border>
+        <TextBlock Grid.Column="1" FontFamily="Arial" FontWeight="Light" Grid.Row="3" Text="Регистрация гонщика" FontSize="10" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="3" Grid.Row="2">
+            <Image Name="MoneyImage" Source="Images/Dengi.png" Grid.Column="3" Grid.Row="2" MouseLeftButtonDown="MoneyImage_MouseLeftButtonDown"/>
+        </Border>
+        <TextBlock Grid.Column="3" FontFamily="Arial" FontWeight="Light" Grid.Row="3" Text="Регистрация спонсора" FontSize="10" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="5" Grid.Row="2">
+            <Image Name="DetailedInformationImage" Source="Images/Informatsia.png" Grid.Column="5" Grid.Row="2" MouseLeftButtonDown="DetailedInformationImage_MouseLeftButtonDown"/>
+        </Border>
+        <TextBlock Grid.Column="5" FontFamily="Arial" FontWeight="Light" Grid.Row="3" Text="О событии" FontSize="10" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="7" Grid.Row="2">
+            <Image Name="KeyImage" Source="Images/Klyuch.png" Grid.Column="7" Grid.Row="2" MouseLeftButtonDown="KeyImage_MouseLeftButtonDown"/>
+        </Border>
+        <TextBlock Grid.Column="7" FontFamily="Arial" FontWeight="Light" Grid.Row="3" Text="Вход в систему" FontSize="10" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </Grid>
+</Window>

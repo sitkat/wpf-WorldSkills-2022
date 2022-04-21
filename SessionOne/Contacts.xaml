@@ -1,0 +1,25 @@
+﻿<Window x:Class="SessionOne.Contacts"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SessionOne"
+        mc:Ignorable="d"
+        Height="250" Width="600" WindowStartupLocation="CenterScreen" Icon="/Images/checkered-flag-sports-tool.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="93"/>
+            <RowDefinition Height="79*"/>
+            <RowDefinition Height="79*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Контакты" Grid.ColumnSpan="2" FontFamily="Ariel" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="25" Height="30" Margin="241,0,0,0" Width="118"/>
+        <TextBlock Text="Телефон:" Grid.Row="1" FontFamily="Ariel" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="25" FontWeight="DemiBold" Margin="0,5,5,0" Height="30" Width="106"/>
+        <TextBlock Text="Email:" Grid.Row="2" FontFamily="Ariel" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="25" FontWeight="DemiBold" Margin="0,5,45,0" Height="30" Width="67"/>
+        <TextBlock Text="+7 999 999 99 99" Grid.Row="1" Grid.Column="1" FontFamily="Ariel" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="25" Margin="5,5,0,0" Height="30" Width="193"/>
+        <TextBlock Text="yugkyug@kartskills.org" Grid.Row="2" FontFamily="Ariel" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="25" Margin="271,5,0,0" Grid.ColumnSpan="2" Width="261" Height="30"/>
+    </Grid>
+</Window>

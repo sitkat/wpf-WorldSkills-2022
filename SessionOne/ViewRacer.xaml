@@ -1,0 +1,80 @@
+﻿<Window x:Class="SessionOne.ViewRacer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SessionOne"
+        mc:Ignorable="d"
+        Title="Kart Skills 2022" TextBlock.TextAlignment="Center" Height="450" Width="800" WindowStartupLocation="CenterScreen" Icon="/Images/checkered-flag-sports-tool.ico">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="44"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <DockPanel x:Name="UpperPanel" Background="Gray" Grid.ColumnSpan="11" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Москва, Россия 20 июня 2022" FontFamily="Arial" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="12"  Grid.Row="1"/>
+                <TextBlock Text="Kart Skills 2022" FontFamily="Arial" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="32"  Grid.Row="0"/>
+                <Button x:Name="btnBackViewRacers"  Margin="34,25,644,25" Content="Назад" FontWeight="Medium" FontSize="15" Grid.RowSpan="2" BorderBrush="Black" Click="btnBackViewRacers_Click"/>
+                <Button x:Name="btnBackToMainMenu"  Margin="644,25,34,25" Content="Выйти" FontWeight="Medium" FontSize="15" BorderBrush="Black" Grid.RowSpan="2" Click="btnBackToMainMenu_Click"/>
+            </Grid>
+        </DockPanel>
+        <TextBlock Text="Управление гонщиком" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="11" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontFamily="Arial" FontWeight="Light"/>
+        <TextBlock  Margin="0 0 10 0" HorizontalAlignment="Right" Text="Email:" Grid.Column="0" Grid.Row="2" FontFamily="Arial" VerticalAlignment="Center" Height="13"/>
+        <TextBlock  Margin="0 0 10 0" HorizontalAlignment="Right" Text="Имя:" Grid.Column="0" Grid.Row="3" FontFamily="Arial"  VerticalAlignment="Center" Height="13"/>
+        <TextBlock  Margin="0 0 10 0" HorizontalAlignment="Right" Text="Фамилия:" Grid.Column="0" Grid.Row="4" FontFamily="Arial" VerticalAlignment="Center" Height="13"/>
+        <TextBlock  Margin="0 0 10 0" HorizontalAlignment="Right" Text="Пол:" Grid.Column="0" Grid.Row="5" FontFamily="Arial" VerticalAlignment="Center" Height="13" />
+        <TextBlock  Margin="0 0 10 0" HorizontalAlignment="Right" Text="Дата рождения:" Grid.Column="0" Grid.Row="6" FontFamily="Arial" VerticalAlignment="Center" Height="13"/>
+        <TextBlock  Margin="0 0 10 0" HorizontalAlignment="Right" Text="Страна:" Grid.Column="0" Grid.Row="7" FontFamily="Arial" VerticalAlignment="Center" Height="13"/>
+        <TextBlock  Margin="0 0 10 0" HorizontalAlignment="Right" Text="Благотворительность:" Grid.Column="0" Grid.Row="8" FontFamily="Arial" VerticalAlignment="Center" Height="13"/>
+        <TextBlock  Margin="0 0 10 0" HorizontalAlignment="Right" Text="Пожертвовано:" Grid.Column="0" Grid.Row="9" FontFamily="Arial" VerticalAlignment="Center" Height="13"/>
+        <TextBlock  Margin="0 0 10 0" HorizontalAlignment="Right" Text="Тип гонки:" Grid.Column="0" Grid.Row="10" FontFamily="Arial" VerticalAlignment="Center" Height="13"/>
+        <Image x:Name="imgPhoto" Grid.Column="2" Grid.Row="3" Grid.RowSpan="5" Margin="35 5 35 5" Source="/Images/profile.png"/>
+
+        <TextBlock x:Name="tbEmail" Margin="10 0 0 0" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="2" FontFamily="Arial" VerticalAlignment="Center" Foreground="Gray"/>
+        <TextBlock x:Name="tbFirstName" Margin="10 0 0 0" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="3" FontFamily="Arial" VerticalAlignment="Center" Foreground="Gray"/>
+        <TextBlock x:Name="tbLastName" Margin="10 0 0 0" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="4" FontFamily="Arial" VerticalAlignment="Center" Foreground="Gray"/>
+        <TextBlock x:Name="tbGender" Margin="10 0 0 0" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="5" FontFamily="Arial" VerticalAlignment="Center" Foreground="Gray"/>
+        <TextBlock x:Name="tbDateOfBirth" Margin="10 0 0 0" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="6" FontFamily="Arial" VerticalAlignment="Center" Foreground="Gray"/>
+        <TextBlock x:Name="tbCountry" Margin="10 0 0 0" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="7" FontFamily="Arial" VerticalAlignment="Center" Foreground="Gray"/>
+        <TextBlock x:Name="tbCharity" Margin="10 0 0 0" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="8" FontFamily="Arial" VerticalAlignment="Center" Foreground="Gray"/>
+        <TextBlock x:Name="tbAmount" Margin="10 0 0 0" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="9" FontFamily="Arial" VerticalAlignment="Center" Foreground="Gray"/>
+        <TextBlock x:Name="tbEvent" Margin="10 0 0 0" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="10" FontFamily="Arial" VerticalAlignment="Center" Foreground="Gray"/>
+
+        <TextBlock HorizontalAlignment="Center" TextAlignment="Center" Grid.Column="3" Grid.Row="2" Grid.RowSpan="2" TextWrapping="Wrap" FontFamily="Arial" FontSize="14" VerticalAlignment="Top">
+            Регистрационный <LineBreak/>
+            статус
+        </TextBlock>
+        <TextBlock x:Name="tbStatus" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="4" FontFamily="Arial" VerticalAlignment="Center"/>
+
+        <Button Name="btnUpdateRacerByCoordinator" Grid.Column="6" Grid.Row="10" Grid.RowSpan="2" Margin="45 5 45 5"  BorderBrush="Black" Click="btnUpdateRacerByCoordinator_Click">
+            <TextBlock Text="Редактировние профиля" TextWrapping="Wrap" TextAlignment="Center"/>
+        </Button>
+
+        <DockPanel x:Name="DownPanel" Background="Gray" Grid.Row="12" Grid.ColumnSpan="11">
+            <TextBlock Name="TimeToEvent" Text="Время" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="12" FontWeight="DemiBold" Grid.Row="1" FontFamily="Arial"/>
+        </DockPanel>
+    </Grid>
+</Window>
